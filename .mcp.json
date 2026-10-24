@@ -2,10 +2,7 @@
   "mcpServers": {
     "tabductor": {
       "type": "http",
-      "url": "${TABDUCTOR_MCP_URL:-https://www.tabductor.com/api/mcp}",
-      "headers": {
-        "Authorization": "Bearer ${TABDUCTOR_API_KEY}"
-      }
+      "url": "https://www.tabductor.com/api/mcp"
     }
   }
 }

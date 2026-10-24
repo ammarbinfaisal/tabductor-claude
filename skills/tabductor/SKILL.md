@@ -10,7 +10,8 @@ Tabductor runs real browsers in the cloud and turns natural-language intent into
 workflows. This plugin exposes it through the `tabductor` MCP server. Tool names are prefixed
 `mcp__plugin_tabductor_tabductor__`; the short names below are what follows that prefix.
 
-Full reference, generated from the live server: https://www.tabductor.com/docs/mcp
+Full reference, generated from the live server, is on the Tabductor docs site under "MCP tool
+reference".
 
 ## Which surface to use
 
@@ -78,8 +79,8 @@ browser is unavailable to workflows until that browser stops, and vice versa.
 
 ## Setup problems
 
-- "MCP bearer token required" or "Invalid or revoked MCP token": `TABDUCTOR_API_KEY` is not set in
-  the environment Claude Code started from, or the key was revoked. Keys are created at
-  https://www.tabductor.com/app/mcp. Tell the user to export it and restart; never ask them to paste
-  the key into the chat.
-- No `tabductor` tools at all: the plugin's MCP server did not connect; `/mcp` shows why.
+- No `tabductor` tools, or the server shows "needs authentication": the user has not signed in
+  yet. Tell them to run `/mcp`, pick `tabductor` and choose Authenticate; a browser window opens
+  where they sign in to Tabductor and approve the connection. Never ask them to paste a key or
+  password into the chat.
+- "The sign-in token is invalid or expired": the same `/mcp` sign-in again.

@@ -15,16 +15,7 @@ Tool reference, generated from the live server: https://www.tabductor.com/docs/m
 
 ## Install
 
-1. Create an API key at https://www.tabductor.com/app/mcp and put it in your shell:
-
-   ```bash
-   export TABDUCTOR_API_KEY="td_mcp_..."
-   ```
-
-   The key must be in the environment Claude Code starts from (add the line to your shell
-   profile). It is never written into the plugin or a config file.
-
-2. Add the plugin:
+1. Add the plugin:
 
    ```bash
    claude plugin marketplace add tabductor/tabductor-plugin
@@ -40,9 +31,18 @@ Tool reference, generated from the live server: https://www.tabductor.com/docs/m
 
    Or, for one session without installing: `claude --plugin-dir /path/to/tabductor-plugin`.
 
-3. Restart Claude Code (or run `/reload-plugins`). `/mcp` should list `tabductor` as connected.
+2. Sign in: run `/mcp`, pick `tabductor` and choose **Authenticate**. A browser window opens
+   where you sign in to your Tabductor account (or create one) and approve the connection.
+   Nothing is copied or stored on your side except the session Claude Code keeps for the
+   server; sign out from the same `/mcp` screen to revoke it.
 
-To point the plugin at another deployment, set `TABDUCTOR_MCP_URL` to its `/api/mcp` endpoint.
+The plugin reads nothing from your machine. It talks only to `www.tabductor.com`.
+
+For a headless or CI setup, use an API key from https://www.tabductor.com/app/mcp instead of
+signing in: `claude mcp add --transport http tabductor https://www.tabductor.com/api/mcp
+--header "Authorization: Bearer <key>"`. The skills work with either.
+
+Privacy: https://www.tabductor.com/privacy
 
 ## Use
 
@@ -72,7 +72,8 @@ own browser time and model usage. Balances and top-ups are at https://www.tabduc
 ```
 .claude-plugin/plugin.json       manifest
 .claude-plugin/marketplace.json  lets this repository be added as a marketplace
-.mcp.json                        the tabductor MCP server (HTTP, bearer key from the environment)
+.mcp.json                        the tabductor MCP server (HTTP; Claude Code signs you in with OAuth)
+.claude-plugin/icon.png          listing icon
 skills/tabductor/SKILL.md        how Claude uses the tools (loaded automatically)
 skills/browse/SKILL.md           /tabductor:browse
 skills/workflow/SKILL.md         /tabductor:workflow

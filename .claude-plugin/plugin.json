@@ -1,7 +1,7 @@
 {
   "name": "tabductor",
-  "version": "0.1.0",
-  "description": "Cloud browsers and durable browser workflows from Claude: open tabs, run JavaScript, take screenshots, and publish, run and schedule Tabductor workflows.",
+  "version": "0.2.0",
+  "description": "Cloud browsers and durable browser workflows from Claude: open tabs, run JavaScript, take screenshots, and publish, run and schedule Tabductor workflows. Sign in with your Tabductor account.",
   "author": {
     "name": "Fullstacktics",
     "email": "ammar@tabductor.com",
@@ -18,5 +18,6 @@
     "playwright"
   ],
   "license": "MIT",
-  "privacyPolicyUrl": "https://www.tabductor.com/privacy"
+  "privacyPolicyUrl": "https://www.tabductor.com/privacy",
+  "icon": "./.claude-plugin/icon.png"
 }
