@@ -1,0 +1,12 @@
+{
+  "name": "tabductor",
+  "description": "Tabductor: cloud browsers and durable browser workflows for Claude.",
+  "owner": { "name": "Fullstacktics", "email": "ammar@tabductor.com" },
+  "plugins": [
+    {
+      "name": "tabductor",
+      "source": ".",
+      "description": "Cloud browsers and durable browser workflows from Claude: open tabs, run JavaScript, take screenshots, and publish, run and schedule Tabductor workflows."
+    }
+  ]
+}

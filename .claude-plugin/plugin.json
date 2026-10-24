@@ -1,0 +1,22 @@
+{
+  "name": "tabductor",
+  "version": "0.1.0",
+  "description": "Cloud browsers and durable browser workflows from Claude: open tabs, run JavaScript, take screenshots, and publish, run and schedule Tabductor workflows.",
+  "author": {
+    "name": "Fullstacktics",
+    "email": "ammar@tabductor.com",
+    "url": "https://www.tabductor.com"
+  },
+  "homepage": "https://www.tabductor.com/docs/mcp",
+  "repository": "https://github.com/tabductor/tabductor-plugin",
+  "keywords": [
+    "browser",
+    "automation",
+    "workflows",
+    "mcp",
+    "scraping",
+    "playwright"
+  ],
+  "license": "MIT",
+  "privacyPolicyUrl": "https://www.tabductor.com/privacy"
+}
