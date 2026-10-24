@@ -67,7 +67,7 @@ Rules of the road:
 - `workflow_publish` with a directing `prompt` (what to do, on which site, what to return) and an
   optional `result_schema` (JSON Schema draft-07) creates a workflow. Reference inputs as
   `$variable-name` in the prompt.
-- `workflow_trigger` starts it (pass `inputs` keyed by variable name, and reuse `request_id` when
+- `workflow_trigger` starts it (supply `inputs` keyed by variable name, and reuse `request_id` when
   retrying an uncertain response). It returns an `executionId`.
 - `workflow_status` polls that execution. When `finished` is true read `result`; failed or cancelled
   executions carry `errors`. Runs take seconds to minutes, so back off between polls.
